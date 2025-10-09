@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Values In Table</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-sm-12">
+            <div>
+                <label><b>PRODUCT:</b></label>
+                <select id="item" class="form-control">
+                    <option>Select product</option>
+                    <option value="13500">Mobile</option>
+                    <option value="46000">Laptap</option>
+                    <option value="18000">Tab</option>
+                    <option value="500">Mobile chager</option>
+                    <option value="2000">Power Bank</option>
+                    <option value="1500">Ear phones</option>
+                    <option value="700">keyBoard</option>
+                </select>
+            </div>
+
+            <div>
+                <label><b>QUANTITY:</b></label>
+                <input type="number" placeholder="enter quantity" class="form-control" id="quantity" required>
+            </div>
+
+            <div>
+                <label><b>PRICE:</b></label>
+                <input type="number" placeholder="enter price" class="form-control" id="price" required>
+            </div>
+
+            <div>
+                <label><b>DISCOUNT:</b></label>
+                <input type="number" placeholder="enter discount" class="form-control" id="discount" required>
+            </div>
+
+            <div>
+                <label><b>TOTAL:</b></label>
+                <input type="number" placeholder="total" class="form-control" id="total" required>
+            </div>
+        </div>
+
+        <div class="col-sm-12 my-3">
+            <button class="btn btn-primary" id="btn_id">Add Product</button>
+        </div>
+
+        <div class="DisplayItems"></div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
