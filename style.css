@@ -1,5 +1,54 @@
+/* Background like sales billing counter */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+/* Main Card */
+.container {
+    background: #ffffff;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+label b {
+    color: #2a5298;
+}
+
+/* Inputs */
+.form-control {
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Button */
+#btn_id {
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Table Styling */
+table {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #2a5298;
+    color: white;
+    text-align: center;
+}
+
 table tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: #f8f9fa;
 }
 
 table tr:nth-child(even) {
@@ -7,5 +56,17 @@ table tr:nth-child(even) {
 }
 
 table tr:hover {
-    background-color: #d1e7dd;
+    background-color: #cfe2ff;
+    transition: 0.3s;
+}
+
+/* Total Row */
+table thead:last-child {
+    background-color: #198754;
+    color: white;
+}
+
+/* Display area */
+.DisplayItems {
+    margin-top: 20px;
 }
