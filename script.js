@@ -49,10 +49,23 @@ $("#btn_id").click(function() {
 
 // Display items in a table
 function DisplayItem(DataList) {
-    var SNO = '';
+
     var AmountTotal = 0;
-    DisplayString = '<table class="table table-bordered" width="100%">';
-    DisplayString += '<thead style="font-weight:bold;"><tr><td>S.No</td><td>Product</td><td>Quantity</td><td>Price</td><td>Discount</td><td>Total</td></tr></thead>';
+    DisplayString = `
+    <div class="bill-table">
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+    `;
 
     for (var i = 0; i < DataList.length; i++) {
         var item = DataList[i];
@@ -60,18 +73,30 @@ function DisplayItem(DataList) {
 
         AmountTotal += parseFloat(item.Total);
 
-        DisplayString += `<tr>
-            <td>${i + 1}</td>
-            <td>${DisProduct1}</td>
-            <td>${item.Quantity}</td>
-            <td>${FormatIndianCur(item.Price)}</td>
-            <td>${item.Discount}</td>
-            <td>${FormatIndianCur(item.Total)}</td>
-        </tr>`;
+        DisplayString += `
+            <tr>
+                <td>${i + 1}</td>
+                <td>${DisProduct1}</td>
+                <td>${item.Quantity}</td>
+                <td>${FormatIndianCur(item.Price)}</td>
+                <td>${FormatIndianCur(item.Discount)}</td>
+                <td>${FormatIndianCur(item.Total)}</td>
+            </tr>
+        `;
     }
 
-    DisplayString += `<thead style="font-weight:bold;"><tr><td colspan="5">Total Amount</td><td>${FormatIndianCur(AmountTotal)}</td></tr></thead>`;
-    DisplayString += '</table>';
+    DisplayString += `
+        </tbody>
+        <tfoot>
+            <tr class="grand-total-row">
+                <td colspan="5" class="text-right"><strong>Total Amount</strong></td>
+                <td><strong>${FormatIndianCur(AmountTotal)}</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+    `;
+
     $(".DisplayItems").html(DisplayString);
 }
 
