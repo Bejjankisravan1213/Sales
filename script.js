@@ -78,22 +78,23 @@ function DisplayItem(DataList) {
 // Convert product value to name
 function getProductName(value) {
     switch (value) {
-        case "13500":
-            return "Mobile";
-        case "46000":
-            return "Laptap";
-        case "18000":
-            return "Tab";
-        case "500":
-            return "Mobile chager";
-        case "2000":
-            return "Power Bank";
-        case "1500":
-            return "Ear phones";
-        case "700":
-            return "keyBoard";
-        default:
-            return "Unknown";
+        case "13500": return "Mobile";
+        case "46000": return "Laptop";
+        case "18000": return "Tablet";
+        case "500": return "Mobile Charger";
+        case "2000": return "Power Bank";
+        case "1500": return "Earphones";
+        case "700": return "Keyboard";
+        case "1200": return "Mouse";
+        case "35000": return "Smart TV";
+        case "25000": return "Refrigerator";
+        case "40000": return "Washing Machine";
+        case "800": return "USB Drive";
+        case "2200": return "Bluetooth Speaker";
+        case "15000": return "Monitor";
+        case "3000": return "Router";
+        default: return "Unknown";
+
     }
 }
 
